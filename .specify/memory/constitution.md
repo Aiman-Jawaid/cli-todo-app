@@ -1,55 +1,57 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: N/A → 1.0.0
+- Modified principles: N/A (new constitution)
+- Added sections: All sections added
+- Removed sections: N/A
+- Templates requiring updates:
+  - .specify/templates/plan-template.md ✅ updated
+  - .specify/templates/spec-template.md ✅ updated
+  - .specify/templates/tasks-template.md ✅ updated
+  - README.md ⚠ pending
+- Follow-up TODOs: None
+-->
+# The Evolution of Todo – Phase I: In-Memory Python Console App Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-Driven Development
+All features must be defined in specifications before implementation; no code should be written without an approved spec; specs act as the single source of truth for all development decisions.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clean Architecture & Code Quality
+Clear separation of concerns; readable, maintainable, beginner-friendly Python code; no unnecessary complexity; follow basic clean code principles with emphasis on educational clarity.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. In-Memory Data Only
+No database or file persistence; all todos exist only during program runtime; data resets when the program restarts; all data operations are performed in memory only.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Required Features Implementation
+Must implement: Add a todo (title + description), View all todos with status (completed/incomplete), Update an existing todo, Delete a todo by ID, Mark a todo as complete or incomplete.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. CLI-First Design
+Text-based menu system; clear prompts and user-friendly messages; graceful handling of invalid input; prioritize console interaction over any other interface patterns.
 
-### [PRINCIPLE_6_NAME]
+### VI. Educational Focus
+Designed for learning and demonstration; prioritize clarity over optimization; code should be easy to understand for students; educational value takes precedence over performance optimizations.
 
+## Project Structure Rules
 
-[PRINCIPLE__DESCRIPTION]
+- /src folder for Python source code
+- specs folder for all specification files
+- Constitution file must guide all development decisions
+- README.md required with setup and run instructions
+- Follow consistent naming and organization patterns for maintainability
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Non-Goals
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- No GUI implementation
+- No web framework usage
+- No database integration
+- No authentication system
+- No external API connections
+- No file persistence mechanisms
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This Constitution serves as the governing document for all development decisions in this project. All code, specifications, and development activities must comply with these principles. Amendments to this Constitution require explicit approval and must be documented with clear rationale. Development workflow must follow the spec-driven approach outlined in this document, with all features requiring specification before implementation.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-01 | **Last Amended**: 2026-01-01
