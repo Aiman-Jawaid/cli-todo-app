@@ -48,4 +48,4 @@ This project follows the principles outlined in the [Constitution](.specify/memo
 - No database integration
 - No authentication system
 - No external API connections
-- No file persistence mechanisms
+- No file persistence mechanisms"# cli-todo-app" 
